@@ -1,0 +1,11 @@
+D:\Учёба. Семестр 2\ИСП\ЛР4\z2\bin\Debug\netcoreapp3.1\z2.exe
+D:\Учёба. Семестр 2\ИСП\ЛР4\z2\bin\Debug\netcoreapp3.1\z2.deps.json
+D:\Учёба. Семестр 2\ИСП\ЛР4\z2\bin\Debug\netcoreapp3.1\z2.runtimeconfig.json
+D:\Учёба. Семестр 2\ИСП\ЛР4\z2\bin\Debug\netcoreapp3.1\z2.runtimeconfig.dev.json
+D:\Учёба. Семестр 2\ИСП\ЛР4\z2\bin\Debug\netcoreapp3.1\z2.dll
+D:\Учёба. Семестр 2\ИСП\ЛР4\z2\bin\Debug\netcoreapp3.1\z2.pdb
+D:\Учёба. Семестр 2\ИСП\ЛР4\z2\obj\Debug\netcoreapp3.1\z2.csprojAssemblyReference.cache
+D:\Учёба. Семестр 2\ИСП\ЛР4\z2\obj\Debug\netcoreapp3.1\z2.AssemblyInfoInputs.cache
+D:\Учёба. Семестр 2\ИСП\ЛР4\z2\obj\Debug\netcoreapp3.1\z2.AssemblyInfo.cs
+D:\Учёба. Семестр 2\ИСП\ЛР4\z2\obj\Debug\netcoreapp3.1\z2.dll
+D:\Учёба. Семестр 2\ИСП\ЛР4\z2\obj\Debug\netcoreapp3.1\z2.pdb

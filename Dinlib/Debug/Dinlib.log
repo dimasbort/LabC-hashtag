@@ -1,0 +1,8 @@
+﻿  Dinlib.cpp
+C:\Intel\Dinlib\Dinlib.cpp(5,33): warning C4273: Sum: несовместимое связывание dll
+C:\Intel\Dinlib\Dinlib.h(9,42): message : см. предыдущее определение "Sum"
+C:\Intel\Dinlib\Dinlib.cpp(10,34): warning C4273: Diff: несовместимое связывание dll
+C:\Intel\Dinlib\Dinlib.h(11,42): message : см. предыдущее определение "Diff"
+C:\Intel\Dinlib\Dinlib.cpp(15,34): warning C4273: stepen: несовместимое связывание dll
+C:\Intel\Dinlib\Dinlib.h(13,40): message : см. предыдущее определение "stepen"
+  Dinlib.vcxproj -> C:\Intel\Dinlib\Debug\Dinlib.dll
