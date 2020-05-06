@@ -8,22 +8,29 @@ namespace z1
 
         protected string sex;
 
+        protected int ID;
+
         public string Name { get; set; }
 
-        public Person() : this("Unknown", 0, "Unknown")
+        public Person() : this("Unknown", 0, "Unknown", CreateID())
         { }
 
-        public Person(string name) : this(name, 0, "Unknown")
+        public Person(string name) : this(name, 0, "Unknown", CreateID())
         { }
 
-        public Person(string name, byte age) : this(name, age, "Unknown")
+        public Person(string name, byte age) : this(name, age, "Unknown", CreateID())
         { }
 
-        public Person(string name, byte age, string sex)
+        public Person(string name, byte age, string sex) : this(name, age, sex, CreateID())
+        { }
+
+
+        public Person(string name, byte age, string sex, int id)
         {
             Name = name;
             Age = age;
             Sex = sex;
+            ID = id;
         }
 
         public string Sex
@@ -31,7 +38,7 @@ namespace z1
             set
             {
                 if (Name == "Dima" && value == "female")
-                    Console.WriteLine("You are lying");
+                    throw new ArgumentException();
                 else
                 if (value == "male" || value == "female")
                     sex = value;
@@ -55,18 +62,18 @@ namespace z1
             get { return age; }
         }
 
-        public virtual void Show()
+        public virtual string Show()
         {
-            Console.WriteLine($"Name: {Name}\nAge: {age.ToString()}\nSex: {sex}");
+            return ($"Name: {Name}\nAge: {age.ToString()}\nSex: {sex}");
         }
 
         static Random rnd = new Random();
 
-        public static void CreateID()
+        public static int CreateID()
         {
-            Console.WriteLine($"Person's unique id - {rnd.Next(1000, 10000).ToString()}");
+            return rnd.Next(1000, 10000);
         }
 
-        public abstract void ShowMarks();
+        public abstract string ShowMarks();
     }
 }

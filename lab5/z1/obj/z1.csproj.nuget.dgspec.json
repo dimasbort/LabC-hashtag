@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Учёба. Семестр 2\\ИСП\\ЛР5\\z1\\z1.csproj": {}
+    "C:\\Intel\\labC-hashtag\\LabC-hashtag\\lab5\\z1\\z1.csproj": {}
   },
   "projects": {
-    "D:\\Учёба. Семестр 2\\ИСП\\ЛР5\\z1\\z1.csproj": {
+    "C:\\Intel\\labC-hashtag\\LabC-hashtag\\lab5\\z1\\z1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Учёба. Семестр 2\\ИСП\\ЛР5\\z1\\z1.csproj",
+        "projectUniqueName": "C:\\Intel\\labC-hashtag\\LabC-hashtag\\lab5\\z1\\z1.csproj",
         "projectName": "z1",
-        "projectPath": "D:\\Учёба. Семестр 2\\ИСП\\ЛР5\\z1\\z1.csproj",
+        "projectPath": "C:\\Intel\\labC-hashtag\\LabC-hashtag\\lab5\\z1\\z1.csproj",
         "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
-        "outputPath": "D:\\Учёба. Семестр 2\\ИСП\\ЛР5\\z1\\obj\\",
+        "outputPath": "C:\\Intel\\labC-hashtag\\LabC-hashtag\\lab5\\z1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",

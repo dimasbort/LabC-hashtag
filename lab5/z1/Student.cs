@@ -16,6 +16,7 @@ namespace z1
             Fifth,
             Magistrant
         }
+        
 
         public string VYS
         {
@@ -31,26 +32,32 @@ namespace z1
             }
         }
 
-        public Student(string name, byte age, string sex, int amount, string yniver) : base(name,age,sex)
+        public Course CURS { get; set; }
+
+        public Student(string name, byte age, string sex, int amount, string yniver) 
+            : base(name,age,sex)
         {
             _marks = new int[amount];
             Length = amount;
             VYS = yniver;
         }
 
-        public Student(string name, int amount) : this(name, 18, "Unknown", amount, "BSUIR")
+        public Student(string name, int amount) 
+            : this(name, 18, "Unknown", amount, "BSUIR")
         {
             _marks = new int[amount];
             Length = amount;
         }
 
-        public Student(int amount, string yniver) : this("Pasha", 18, "male", amount, yniver)
+        public Student(int amount, string yniver) 
+            : this("Pasha", 18, "male", amount, yniver)
         {   _marks = new int[amount];
             Length = amount;
             VYS = yniver;
         }
 
-        public Student() : this("Pasha", 18, "male", 3, "BSUIR")
+        public Student() 
+            : this("Pasha", 18, "male", 3, "BSUIR")
         {        }
 
         public int this[int index]
@@ -65,25 +72,23 @@ namespace z1
             set
             {
                 if (index > 0 && index <= Length && value <= 10 && value >= 0)
-                    _marks[index-1] = value;
+                    _marks[index - 1] = value;
                 else
-                    Console.WriteLine("incorrect input");
+                    throw new ArgumentException();
             }
         }
 
-        public new virtual void Show()
+        public new virtual string Show()
         {
-            Console.WriteLine($"Name: {Name}\nAge: {age.ToString()}\nSex: {sex}\nVYS: {VYS}");
+            return ($"Name: {Name}\nAge: {age.ToString()}\nSex: {sex}\nVYS: {VYS}");
         }
 
-        public override void ShowMarks()
+        public override string ShowMarks()
         {
-            int i = 1;
+            string ocenki = "";
             foreach (int mark in _marks)
-            {
-                Console.WriteLine($"{i}: {mark}");
-                i++;
-            }
+                ocenki+=mark.ToString()+" ";
+            return ocenki;
         }
     }
 }

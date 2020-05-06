@@ -20,7 +20,7 @@ namespace z1
                 else
                 {
                     patron = "Unknown " + value;
-                    Console.WriteLine("Incorrect input");
+                    throw new ArgumentException();
                 }
             }
         }
