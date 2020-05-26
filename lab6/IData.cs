@@ -2,7 +2,7 @@
 {
     interface IData<T>
     {
-        T Weight { get; set; }
-        T Height { get; set; }
+        T Weight { get; }
+        T Height { get; }
     }
 }

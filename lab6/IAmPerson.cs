@@ -2,8 +2,8 @@
 {
     interface IAmPerson : IData<int>
     {
-        string Name { get; set; }
-        string Surname { get; set; }
-        string Adress { get; set; }
+        string Name { get; }
+        string Surname { get; }
+        string Adress { get; }
     }
 }

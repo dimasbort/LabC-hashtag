@@ -4,12 +4,23 @@ namespace z1
 {
     struct Rational : IComparable<Rational>, IEquatable<Rational>
     {
-        public readonly int _chislitel;
-        public readonly int _znamenatel;
+        private int _chislitel;
+        private int _znamenatel;
+
+        public int Chisl
+        {
+            get { return _chislitel; }
+        }
+
+        public int Znam
+        {
+            get { return _znamenatel; }            
+        }        
 
         public Rational(int chislitel) : this(chislitel, 1) { }
         public Rational(int chislitel, int znamenatel)
         {
+            if (znamenatel  == 0) throw new ArgumentNullException();
             _chislitel = chislitel;
             _znamenatel = znamenatel;
         }
@@ -17,7 +28,7 @@ namespace z1
         //реализация методов интерфейсов
         public int CompareTo(Rational sravnimChislo)
         {
-            return _chislitel.CompareTo(sravnimChislo);
+            return Chisl.CompareTo(sravnimChislo);
         }
 
         public override bool Equals(object sravnimNumber)
@@ -29,87 +40,45 @@ namespace z1
         {
             Rational RatNumberSravn = (Rational)sravnimNumber;
 
-            return (_chislitel == RatNumberSravn._chislitel &&
-            _znamenatel == RatNumberSravn._znamenatel);
+            return (Chisl == RatNumberSravn.Chisl &&
+            Znam == RatNumberSravn.Znam);
         }
 
         //перекрытие
         public static Rational operator +(Rational a, Rational b)
         {
-            if (a._znamenatel != 0 && b._znamenatel != 0)
-            {
-                return new Rational(a._chislitel * b._znamenatel + b._znamenatel * a._znamenatel,
-                    a._znamenatel * b._znamenatel);
-            }
-            else
-            {
-                return 0;
-            }
+            return new Rational(a.Chisl * b.Znam + b.Chisl * a.Znam,
+                    a.Znam * b.Znam);
         }
 
         public static Rational operator -(Rational a, Rational b)
         {
-            if (a._znamenatel != 0 && b._znamenatel != 0)
-            {
-                return new Rational(a._chislitel * b._znamenatel - b._chislitel * a._znamenatel,
-                    a._znamenatel * b._znamenatel);
-            }
-            else
-            {
-                return 0;
-            }
+                return new Rational(a.Chisl * b.Znam - b.Chisl * a.Znam,
+                    a.Znam * b.Znam);            
         }
 
         public static Rational operator *(Rational a, Rational b)
         {
-            if (a._znamenatel != 0 && b._znamenatel != 0)
-            {
-                return new Rational(a._chislitel * b._chislitel,
-                    a._znamenatel * b._znamenatel);
-            }
-            else
-            {
-                return 0;
-            }
+                return new Rational(a.Chisl * b.Chisl,
+                    a.Znam * b.Znam);            
         }
 
         public static Rational operator /(Rational a, Rational b)
-        {
-            if (a._znamenatel != 0 && b._znamenatel != 0)
-            {
-                return new Rational(a._chislitel * b._znamenatel,
-                    a._znamenatel * b._chislitel);
-            }
-            else
-            {
-                return 0;
-            }
+        {            
+                return new Rational(a.Chisl * b.Znam,
+                    a.Znam * b.Chisl);            
         }
 
         public static bool operator >(Rational a, Rational b)
-        {
-            if (a._znamenatel != 0 && b._znamenatel != 0)
-            {
-                return a._chislitel * b._znamenatel
-                    > b._chislitel * a._znamenatel;
-            }
-            else
-            {
-                return false;
-            }
+        {            
+                return a.Chisl * b.Znam
+                    > b.Chisl * a.Znam;            
         }
 
         public static bool operator <(Rational a, Rational b)
-        {
-            if (a._znamenatel != 0 && b._znamenatel != 0)
-            {
-                return a._chislitel * b._znamenatel
-                    < b._chislitel * a._znamenatel;
-            }
-            else
-            {
-                return false;
-            }
+        {            
+                return a.Chisl * b.Znam
+                    < b.Chisl * a.Znam;
         }
 
         public static bool operator ==(Rational number1, Rational number2)
@@ -119,7 +88,7 @@ namespace z1
 
         public static bool operator !=(Rational number1, Rational number2)
         {
-            return number1.Equals(number2);
+            return !number1.Equals(number2);
         }
 
         public override int GetHashCode()
@@ -127,7 +96,7 @@ namespace z1
             return base.GetHashCode();
         }
 
-        public static implicit operator Rational(string number)
+        public static explicit operator Rational(string number)
         {
             return Parse(number);
         }
@@ -144,30 +113,28 @@ namespace z1
 
         public static explicit operator int(Rational number)
         {
-            return Convert.ToInt32(number._chislitel / number._znamenatel);
+            return Convert.ToInt32(number.Chisl / number.Znam);
         }
 
-        public static implicit operator Rational(double doubleNum)
+        public static explicit operator Rational(double doubleNum)
         {
             return new Rational(Convert.ToInt32(doubleNum * 100), 100);
         }
 
         public static explicit operator double(Rational number)
         {
-            return number._chislitel / number._znamenatel;
+            return number.Chisl / number.Znam;
         }
 
         //преобразуем в строку
         public override string ToString()
         {
-            return (_chislitel.ToString() + "/" + _znamenatel.ToString());
+            return (Chisl.ToString() + "/" + Znam.ToString());
         }
 
         //и наоборот
         public static Rational Parse(string RatNumStr)
-        {
-            try
-            {
+        {            
                 if (!string.IsNullOrEmpty(RatNumStr))
                 {
                     if (RatNumStr.IndexOf('/') != -1)
@@ -189,8 +156,7 @@ namespace z1
                     {
                         double thisIn;
 
-                        try
-                        {
+                        
                             int dop;
                             int thisOut;
 
@@ -200,22 +166,15 @@ namespace z1
                             dop = Convert.ToInt32(Math.Round((thisIn - thisOut), 3) * 1000);
 
                             return new Rational((thisOut * 1000) + dop, 1000);
-                        }
-                        catch (FormatException)
-                        {
-                            return 0;
-                        }
+                        
                     }
                 }
                 else
                 {
                     throw new Exception("Invalid value parcing!");
                 }
-            }
-            catch (FormatException)
-            {
-                return 0;
-            }
+                     
         }
     }
 }
+

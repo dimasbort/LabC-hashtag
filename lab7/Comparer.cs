@@ -6,11 +6,11 @@ namespace z1
     {
         public int Compare(Rational obj1, Rational obj2)
         {
-            if (obj1._chislitel * obj2._znamenatel > obj2._chislitel * obj1._znamenatel)
+            if (obj1.Chisl * obj2.Znam > obj2.Chisl * obj1.Znam)
             {
                 return 1;
             }
-            else if ((obj1._chislitel == obj2._chislitel) && (obj1._znamenatel == obj2._znamenatel))
+            else if ((obj1.Chisl == obj2.Chisl) && (obj1.Znam == obj2.Znam))
             {
                 return 0;
             }

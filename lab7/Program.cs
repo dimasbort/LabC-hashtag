@@ -1,4 +1,5 @@
-﻿using static System.Console;
+﻿using System;
+using static System.Console;
 
 namespace z1
 {
@@ -63,7 +64,15 @@ namespace z1
                     }
                 }
                 z++;
-                RNumbers[i] = new Rational(chisl, znam);
+                try
+                {
+                    RNumbers[i] = new Rational(chisl, znam);
+                }
+                catch(ArgumentNullException err)
+                {
+                    WriteLine(err.Message);
+                }
+                   
                 WriteLine("");
             }
         }     
@@ -72,8 +81,8 @@ namespace z1
             for (int i = 0; i < RNumbers.Length; i++)
             {
                 Write($"{i + 1}) ");                
-                WriteLine(RNumbers[i]._chislitel.ToString() + "/" + RNumbers[i]._znamenatel.ToString());               
-                WriteLine((RNumbers[i]._chislitel / RNumbers[i]._znamenatel).ToString());
+                WriteLine(RNumbers[i].Chisl.ToString() + "/" + RNumbers[i].Znam.ToString());               
+                WriteLine((RNumbers[i].Chisl / RNumbers[i].Znam).ToString());
                 WriteLine("");
             }
         }                      
