@@ -2,7 +2,7 @@
 
 namespace z1
 {
-    class Student : Person
+    class Student : Person, IAmStudent
     {
         protected int[] _marks;
         protected string vys;
