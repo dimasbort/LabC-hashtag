@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Options>
+  <Paths>
+    <Source>E:\SourceDirectory</Source>
+    <Target>E:\TargetDirectory</Target>
+    <Logger>E:\\TargetDirectory\\log.txt</Logger>
+  </Paths>
+  <Archivator>
+    <Extension>.gz</Extension>
+  </Archivator>
+  <Cipher>
+    <Key>tir</Key>
+  </Cipher>
+</Options>
