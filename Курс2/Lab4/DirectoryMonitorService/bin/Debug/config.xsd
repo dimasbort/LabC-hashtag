@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    attributeFormDefault="unqualified"
+    elementFormDefault="qualified">
+
+  <xs:element name="configuration">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" name="PathOption">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="sourceDirectory" type="xs:string" />
+              <xs:element name="targetDirectory" type="xs:string" />
+              <xs:element name="DBProperty1" type="xs:string" />
+              <xs:element name="DBProperty2" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="LogsOption">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="errorLogProperty" type="xs:string" />
+              <xs:element name="logProperty" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ArchiveOption">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="activator" type="xs:boolean" />
+              <xs:element name="extension" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="CipherOption">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="activator" type="xs:boolean" />
+              <xs:element name="cipherkey" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<configuration>
+  <PathOption>
+    <sourceDirectory>E:\SourceDirectory</sourceDirectory>
+    <targetDirectory>E:\TargetDirectory</targetDirectory>
+    <DBProperty1>Server=DIMA;Database=AdventureWorks2019;Trusted_Connection=True;</DBProperty1>
+</PathOption>
+  <Logs>
+    <logProperty>E:\TargetDirectory\log.txt</logProperty>
+  </Logs>
+  <ArchiveOption>
+    <extension>.rar</extension>
+  </ArchiveOption>
+  <CipherOption>
+    <cipherkey>jb</cipherkey>
+  </CipherOption>
+</configuration>

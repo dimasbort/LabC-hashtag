@@ -1,0 +1,11 @@
+C:\Users\Dmitry\source\repos\3lab\DBModels\bin\Debug\DBModels.dll
+C:\Users\Dmitry\source\repos\3lab\DBModels\bin\Debug\DBModels.pdb
+C:\Users\Dmitry\source\repos\3lab\DBModels\obj\Debug\DBModels.csproj.CoreCompileInputs.cache
+C:\Users\Dmitry\source\repos\3lab\DBModels\obj\Debug\DBModels.dll
+C:\Users\Dmitry\source\repos\3lab\DBModels\obj\Debug\DBModels.pdb
+C:\Users\Dmitry\source\repos\3lab\DBModels\obj\Debug\DBModels.csprojAssemblyReference.cache
+C:\Users\Dmitry\source\repos\DimaBort\DBModels\bin\Debug\DBModels.dll
+C:\Users\Dmitry\source\repos\DimaBort\DBModels\bin\Debug\DBModels.pdb
+C:\Users\Dmitry\source\repos\DimaBort\DBModels\obj\Debug\DBModels.csproj.CoreCompileInputs.cache
+C:\Users\Dmitry\source\repos\DimaBort\DBModels\obj\Debug\DBModels.dll
+C:\Users\Dmitry\source\repos\DimaBort\DBModels\obj\Debug\DBModels.pdb

@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<configuration>
+  <PathOption>
+    <sourceDirectory>E:\SourceDirectory</sourceDirectory>
+    <targetDirectory>E:\TargetDirectory</targetDirectory>
+    <PathToDB1>@Data Source=DMITRY;Initial Catalog=AdventureWorks;Integrated Security=True</PathToDB1>
+    <PathToDB2>@Data Source=DMITRY;Initial Catalog=ApplicationInsights;Integrated Security=True</PathToDB2>
+  </PathOption>
+  <LogsOption>
+    <errorLogProperty>E:\TargetDirectory\Errors.txt</errorLogProperty>
+    <logProperty>E:\TargetDirectory\log.txt</logProperty>
+  </LogsOption>
+  <ArchiveOption>
+    <activator>true</activator>
+    <extension>.rar</extension>
+  </ArchiveOption>
+  <CipherOption>
+    <activator>true</activator>
+    <cipherkey>key</cipherkey>
+  </CipherOption>
+</configuration>
